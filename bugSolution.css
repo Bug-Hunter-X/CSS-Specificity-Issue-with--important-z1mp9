@@ -1,0 +1,19 @@
+To solve this, refactor the CSS to avoid the `!important` flag.  One possible solution is to adjust the order of selectors or adjust the classes used, prioritizing specificity appropriately. 
+
+Here's an example of a solution:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.parent .child {
+  color: green;
+}
+```
+
+In this revised example, the specificity of `.parent .child` takes precedence, resulting in the expected green color.
